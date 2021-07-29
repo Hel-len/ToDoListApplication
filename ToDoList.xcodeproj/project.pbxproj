@@ -20,6 +20,8 @@
 		BF28E68F26501B2E00E460E8 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF28E68E26501B2E00E460E8 /* AlertController.swift */; };
 		BF28E69326505AB200E460E8 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF28E69226505AB200E460E8 /* TaskList.swift */; };
 		BF28E697265060DC00E460E8 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF28E696265060DC00E460E8 /* StorageManager.swift */; };
+		BF28E69A2654220300E460E8 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF28E6992654220200E460E8 /* DataManager.swift */; };
+		BF28E69D265448B800E460E8 /* Extension + UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF28E69C265448B800E460E8 /* Extension + UITableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		BF28E68E26501B2E00E460E8 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		BF28E69226505AB200E460E8 /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
 		BF28E696265060DC00E460E8 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		BF28E6992654220200E460E8 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		BF28E69C265448B800E460E8 /* Extension + UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UITableViewCell.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 				BF28E687265018D000E460E8 /* TaskListViewController.swift */,
 				BF28E68B26501ABB00E460E8 /* TasksViewController.swift */,
 				BF28E68E26501B2E00E460E8 /* AlertController.swift */,
+				BF28E69C265448B800E460E8 /* Extension + UITableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				BF28E696265060DC00E460E8 /* StorageManager.swift */,
+				BF28E6992654220200E460E8 /* DataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -194,7 +200,9 @@
 				BF28E663264FEED300E460E8 /* SceneDelegate.swift in Sources */,
 				BF28E68F26501B2E00E460E8 /* AlertController.swift in Sources */,
 				BF28E66B264FEED300E460E8 /* ToDoList.xcdatamodeld in Sources */,
+				BF28E69A2654220300E460E8 /* DataManager.swift in Sources */,
 				BF28E697265060DC00E460E8 /* StorageManager.swift in Sources */,
+				BF28E69D265448B800E460E8 /* Extension + UITableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
