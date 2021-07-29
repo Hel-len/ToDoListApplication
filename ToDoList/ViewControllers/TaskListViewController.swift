@@ -24,7 +24,6 @@ class TaskListViewController: UITableViewController {
         tableView.reloadData()
     }
 
-    // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         taskLists.count
     }
@@ -32,19 +31,15 @@ class TaskListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskListCell", for: indexPath)
-
         let taskList = taskLists[indexPath.row]
         cell.configure(with: taskList)
 
         return cell
     }
-    
-    // MARK: - Table view delegate
-    
+
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let taskList = taskLists[indexPath.row]
-        
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (_, _, _) in
             StorageManager.shared.delete(taskList: taskList)
             tableView.deleteRows(at: [indexPath], with: .automatic)
@@ -65,7 +60,6 @@ class TaskListViewController: UITableViewController {
         
         editAction.backgroundColor = .orange
         doneAction.backgroundColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
-        
         return UISwipeActionsConfiguration(actions: [deleteAction, editAction, doneAction])
     }
     
@@ -74,7 +68,6 @@ class TaskListViewController: UITableViewController {
         guard let tasksVC = segue.destination as? TasksViewController else { return }
         let taskList = taskLists[indexPath.row]
         tasksVC.taskList = taskList
-        
     }
     
     @IBAction func addNewTaskList(_ sender: Any) {

@@ -15,7 +15,6 @@ class TaskList: Object {
 }
 
 class Task: Object {
-    
     @objc dynamic var name = ""
     @objc dynamic var note = ""
     @objc dynamic var date = Date()

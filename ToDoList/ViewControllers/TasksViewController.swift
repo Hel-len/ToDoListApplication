@@ -29,8 +29,6 @@ class TasksViewController: UITableViewController {
         navigationItem.rightBarButtonItems = [addButton, editButtonItem]
     }
 
-    // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         2
     }
@@ -52,8 +50,6 @@ class TasksViewController: UITableViewController {
         cell.contentConfiguration = content
         return cell
     }
-    
-    // MARK: - UITableViewDelegate
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
@@ -80,7 +76,6 @@ class TasksViewController: UITableViewController {
             let indexPathForCompletedTask = IndexPath(row: self.completedTasks.count - 1, section: 1)
             let destinationIndexRow = indexPath.section == 0 ? indexPathForCompletedTask : indexPathForCurrentTask
             tableView.moveRow(at: indexPath, to: destinationIndexRow)
-            
             isDone(true)
         }
         
@@ -93,7 +88,6 @@ class TasksViewController: UITableViewController {
     @objc private func addButtonPressed() {
         showALert()
     }
-    
 }
 
 extension TasksViewController {
@@ -109,14 +103,15 @@ extension TasksViewController {
                 self.saveTask(withName: newValue, andNote: note)
             }
         }
+        
         present(alert, animated: true)
     }
     
     private func saveTask(withName name: String, andNote note: String) {
         let task = Task(value:[name, note])
         StorageManager.shared.save(task: task, in: taskList)
+        
         let rowIndex = IndexPath(row: currentTasks.count - 1, section: 0)
         tableView.insertRows(at: [rowIndex], with: .automatic)
     }
-    
 }
